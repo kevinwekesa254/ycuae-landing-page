@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════════════
+   youcloud — Design tokens
+   Taken from the live youcloud.ae site (css/styles.css).
+   Coral · Navy · Warm off-white. Poppins display + Calibri/Carlito body.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap');
+
+:root {
+  /* ─── youcloud.ae palette ─── */
+  --coral:      #f96067;
+  --coral-d:    #e8464f;   /* hover */
+  --coral-soft: #fcd3d2;
+  --coral-tint: #fff1f0;
+  --navy:       #0a1c3a;
+  --navy-2:     #122a52;
+  --navy-line:  rgba(255, 255, 255, 0.22);
+  --page:       #fbfbf8;   /* page background */
+  --text:       #4b5671;   /* body copy */
+  --sky:        #f6f9fe;
+  --mist:       #f7f9fc;
+  --sand:       #f7f6f2;
+  --pink-img:   #dcc3c9;   /* behind product shots */
+  --green:      #22c55e;
+
+  /* ─── Names the components and forms use ─── */
+  --ink:        #0a1c3a;
+  --ink-2:      #122a52;
+  --ink-3:      #0a1c3a;
+  --muted:      #4b5671;
+  --muted-2:    #7c869d;
+  --bg:         #ffffff;
+  --bg-cream:   #fbfbf8;
+  --bg-2:       #f7f9fc;
+  --line:       #e3e6ee;
+  --line-2:     #c9cedb;
+  --brand:      #f96067;
+  --brand-ink:  #e8464f;
+  --brand-soft: #fcd3d2;
+  --brand-soft-2: #fcd3d2;
+  --c-hr:       #22c55e;
+  --c-hr-soft:  #dcfce7;
+
+  /* ─── Type ─── */
+  --f-display: 'Poppins', system-ui, sans-serif;
+  --f-body:    Calibri, 'Carlito', 'Segoe UI', system-ui, sans-serif;
+  --f-mono:    var(--f-body);  /* youcloud.ae has no mono face; labels are bold uppercase body */
+  --f-ar:      'Noto Kufi Arabic', 'Noto Sans Arabic', Tahoma, sans-serif;
+
+  /* ─── Radii ─── */
+  --r-xs:   6px;
+  --r-sm:   8px;   /* buttons */
+  --r-md:   16px;  /* cards */
+  --r-lg:   16px;
+  --r-xl:   24px;  /* media, large cards */
+  --r-pill: 999px;
+
+  /* ─── Shadows (navy-tinted, soft and low) ─── */
+  --shadow-sm:  0 1px 3px rgba(10, 28, 58, 0.06);
+  --shadow-md:  0 24px 40px -28px rgba(10, 28, 58, 0.35);
+  --shadow-lg:  0 30px 60px -40px rgba(10, 28, 58, 0.45);
+  --shadow-coral: 0 30px 60px -30px rgba(249, 96, 103, 0.7);
+
+  /* ─── Motion ─── */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ─── Layout ─── */
+  --max: 1280px;
+  --nav-h: 96px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--f-body);
+  color: var(--text);
+  background: var(--page);
+  font-size: 18px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
+p { text-wrap: pretty; }
+
+::selection { background: var(--coral); color: #fff; }
