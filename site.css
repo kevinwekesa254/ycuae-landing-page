@@ -42,8 +42,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 [dir="rtl"] .arr { display: inline-block; transform: scaleX(-1); }
 
 /* ---------- Nav ---------- */
-.nav { position: sticky; top: 0; z-index: 100; background: rgba(251, 251, 248, .86); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); transition: box-shadow .3s, background-color .3s; }
-.nav.scrolled { box-shadow: 0 8px 30px -12px rgba(10, 28, 58, .18); background: rgba(251, 251, 248, .94); }
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, .45); backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px); transition: box-shadow .3s, background-color .3s, backdrop-filter .3s, -webkit-backdrop-filter .3s; }
+.nav.scrolled { box-shadow: 0 8px 30px -12px rgba(10, 28, 58, .18); background: rgba(255, 255, 255, .62); backdrop-filter: saturate(1.6) blur(20px); -webkit-backdrop-filter: saturate(1.6) blur(20px); }
 .nav-inner { display: flex; align-items: center; height: var(--nav-h); gap: 24px; transition: height .3s var(--ease); }
 .nav.scrolled .nav-inner { height: 76px; }
 .brand { flex: 0 0 auto; }
@@ -485,3 +485,27 @@ html[lang="ar"] .pf-num, html[lang="ar"] .pf-ledger-sub, html[lang="ar"] .pf-pil
 /* ---------- Closing section: breathing room between the skyline photo and the footer ---------- */
 .split-cta { padding-bottom: clamp(36px, 4.5vw, 64px); }
 @media (max-width: 960px) { .split-cta { padding-bottom: 36px; } }
+
+/* ---------- Section labels (eyebrows): translucent coral pill with two dots, as on youcloud.ae (2026-10-26) ---------- */
+:root { --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  width: auto; max-width: 100%;
+  padding: 9px 18px 9px 15px; border: 0; border-radius: 999px;
+  background: rgba(249, 97, 103, .16); color: #b8434c;
+  font-family: var(--f-mono); font-weight: 700; font-size: 13px; line-height: 1.2;
+  letter-spacing: .14em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: ""; flex: 0 0 auto; width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; box-shadow: 11px 0 0 currentColor; margin-inline-end: 11px;
+}
+/* navy backgrounds: the navy shows through with a warm tint */
+.dark .eyebrow { background: rgba(249, 97, 103, .12); color: #f3b9bd; }
+html[lang="ar"] .eyebrow { font-family: var(--f-ar); letter-spacing: 0; font-size: 14px; line-height: 1.6; padding-block: 6px 7px; }
+[dir="rtl"] .eyebrow::before { box-shadow: -11px 0 0 currentColor; }
+@media (max-width: 680px) {
+  .eyebrow { font-size: 12px; padding: 8px 16px 8px 14px; }
+  html[lang="ar"] .eyebrow { font-size: 13px; padding-block: 5px 6px; }
+}
